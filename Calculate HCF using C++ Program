@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int x,y;
+    cout<<"Enter a number : ";
+    cin>>x;
+    cout<<"Enter a number : ";
+    cin>>y;
+    int HCF = 1;
+    if (x==0 || y==0)
+    {
+        HCF = 0;
+    }else{
+        for (int i = min(x,y); i >= 1; i--)
+        { 
+            if (x%i==0 && y%i==0)
+            {
+                HCF = i;
+                break;
+            }
+        }
+    }
+    
+    
+    cout<<HCF;
+    
+    return 0;
+}
